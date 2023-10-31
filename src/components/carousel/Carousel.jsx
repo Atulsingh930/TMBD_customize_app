@@ -17,7 +17,6 @@ const Carousel = ({ data, loading, endpoint, title }) => {
     const { url } = useSelector((state) => state.home);
     const navigate = useNavigate();
 
-
     const skItem = () => {
         return (
             <div className="movieCard">
@@ -37,7 +36,7 @@ const Carousel = ({ data, loading, endpoint, title }) => {
     };
 
     return (
-        <div className="carousel">
+        data?.length>0 && (<div className="carousel">
             <ContentWrapper>
                 {title && <div className="carouselTitle">{title}</div>}
                 {!loading ? (
@@ -93,7 +92,7 @@ const Carousel = ({ data, loading, endpoint, title }) => {
                     </div>
                 )}
             </ContentWrapper>
-        </div>
+        </div>)
     );
 };
 

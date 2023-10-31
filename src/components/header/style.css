@@ -57,6 +57,7 @@
     align-items: center;
     margin: 0 15px;
     color: white;
+    cursor: pointer;
     font-weight: 500;
     position: relative;
 }
